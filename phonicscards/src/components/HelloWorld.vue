@@ -44,11 +44,9 @@ export default {
       const randomopperator = Math.floor(Math.random() * 2);
       var result;
       if (randomopperator === 0) {
-        const sum = randomnumber + randomnumber2;
-        result = sum;
+        result = randomnumber + randomnumber2;
       } else {
-        const difference = randomnumber - randomnumber2;
-        result = differenece;
+        result = randomnumber - randomnumber2;
       }
       return result;
     },
