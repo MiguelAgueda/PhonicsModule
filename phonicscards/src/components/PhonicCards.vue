@@ -1,140 +1,183 @@
 <template>
-  <b-row class="text-center">
-    <b-container>
-      <b-card-group deck class="pb-4">
-        <b-card img-src="Apple.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary" @click.prevent="playSound('A.m4a')">A</b-button>
-        </b-card>
-
-        <b-card img-src="Balloon.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">B</b-button>
-        </b-card>
-
-        <b-card img-src="Caterpillar.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">C</b-button>
+  <b-container>
+    <b-row v-for="row in rows" :key="row[0].letter">
+      <b-card-group deck class=" pb-4 mx-auto" v-for="letter in row" :key="letter.letter">
+        <!-- <b-card-group> -->
+        <b-card img-top style="max-width: 17rem;" :img-src="letter.image">
+          <b-card-title>
+            <b-button href="#" variant="success" @click.prevent="playSound(letter.sound)"
+              ><H2>{{ letter.letter }}</H2></b-button
+            >
+          </b-card-title>
         </b-card>
       </b-card-group>
-
-      <b-card-group deck>
-        <b-card img-src="Dog.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">D</b-button>
-        </b-card>
-
-        <b-card img-src="Egg.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">E</b-button>
-        </b-card>
-
-        <b-card img-src="Fish.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">F</b-button>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck class="pb-4">
-        <b-card img-src="Guitar.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">G</b-button>
-        </b-card>
-
-        <b-card img-src="Hat.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">H</b-button>
-        </b-card>
-
-        <b-card img-src="Igloo.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">I</b-button>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck>
-        <b-card img-src="Jar.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">J</b-button>
-        </b-card>
-
-        <b-card img-src="Key.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">K</b-button>
-        </b-card>
-
-        <b-card img-src="Lamp.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">L</b-button>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck class="pb-4">
-        <b-card img-src="Monkey.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">M</b-button>
-        </b-card>
-
-        <b-card img-src="Nest.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">N</b-button>
-        </b-card>
-
-        <b-card img-src="Octopus.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">O</b-button>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck>
-        <b-card img-src="Pencil.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">P</b-button>
-        </b-card>
-
-        <b-card img-src="Queen.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">Q</b-button>
-        </b-card>
-
-        <b-card img-src="Ring.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">R</b-button>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck class="pb-4">
-        <b-card img-src="Snake.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">S</b-button>
-        </b-card>
-
-        <b-card img-src="Turtle.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">T</b-button>
-        </b-card>
-
-        <b-card img-src="Umbrella.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">U</b-button>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck>
-        <b-card img-src="Vacuum.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">V</b-button>
-        </b-card>
-
-        <b-card img-src="Wagon.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">W</b-button>
-        </b-card>
-
-        <b-card img-src="Box.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">X</b-button>
-        </b-card>
-      </b-card-group>
-
-      <b-card-group deck class="pb-4">
-        <b-card img-src="Yo-Yo.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">Y</b-button>
-        </b-card>
-
-        <b-card img-src="Zipper.png" img-top style="max-width: 20rem;">
-          <b-button href="#" variant="primary">Z</b-button>
-        </b-card>
-      </b-card-group>
-    </b-container>
-  </b-row>
-
-  <!-- </div> -->
+    </b-row>
+  </b-container>
 </template>
 
 <script>
 export default {
   name: 'PhonicCards',
+
+  data() {
+    return {
+      rows: this.getAlphabetRows(),
+    };
+  },
+
   methods: {
     playSound(sound) {
       const audio = new Audio(sound);
       audio.play();
+    },
+
+    getAlphabet() {
+      return [
+        {
+          letter: 'A',
+          image: 'Apple.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'B',
+          image: 'Balloon.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'C',
+          image: 'Caterpillar.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'D',
+          image: 'Dog.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'E',
+          image: 'Egg.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'F',
+          image: 'Fish.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'G',
+          image: 'Guitar.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'H',
+          image: 'Hat.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'I',
+          image: 'Igloo.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'J',
+          image: 'Jar.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'K',
+          image: 'Key.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'L',
+          image: 'Lamp.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'M',
+          image: 'Monkey.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'N',
+          image: 'Nest.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'O',
+          image: 'Octopus.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'P',
+          image: 'Pencil.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'Q',
+          image: 'Queen.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'R',
+          image: 'Ring.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'S',
+          image: 'Snake.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'T',
+          image: 'Turtle.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'U',
+          image: 'Umbrella.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'V',
+          image: 'Vacuum.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'W',
+          image: 'Wagon.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'X',
+          image: 'Box.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'Y',
+          image: 'Yo-Yo.png',
+          sound: 'A.m4a',
+        },
+        {
+          letter: 'Z',
+          image: 'Zipper.png',
+          sound: 'A.m4a',
+        },
+      ];
+    },
+
+    getAlphabetRows() {
+      const rows = [];
+      const itemsPerRow = 3;
+      const alphabet = this.getAlphabet();
+      for (let i = 0; i < alphabet.length; i += itemsPerRow) {
+        const row = [];
+        for (let j = 0; j < itemsPerRow; j += 1) {
+          if (i + j < alphabet.length) row.push(alphabet[i + j]);
+        }
+        rows.push(row);
+      }
+      return rows;
     },
   },
 };
