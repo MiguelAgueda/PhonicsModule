@@ -12,14 +12,7 @@
     <b-container class="text-left pt-4 pb-4">
       <label for="nl2"><h4>Choose the number 4 on the number line.</h4></label>
       <b-input-group class="pt-2 pb-2" prepend="0" append="10">
-        <b-form-input
-          id="nl2"
-          v-model="numberLine2"
-          type="range"
-          min="0"
-          max="10"
-          v-on="isEqual()"
-        ></b-form-input>
+        <b-form-input id="nl2" v-model="numberLine2" type="range" min="0" max="10"></b-form-input>
       </b-input-group>
       <label for="nl2">Is {{ numberLine2 }} = 4? {{ NL2Result }}.</label>
     </b-container>
