@@ -3,7 +3,7 @@
     <b-row v-for="row in rows" :key="row[0].letter">
       <b-card-group deck class=" pb-4 mx-auto" v-for="letter in row" :key="letter.letter">
         <!-- <b-card-group> -->
-        <b-card img-top style="max-width: 17rem;" :img-src="letter.image">
+        <b-card img-top style="max-width: 15rem;" :img-src="letter.image">
           <b-card-title>
             <b-button href="#" variant="success" @click.prevent="playSound(letter.sound)"
               ><H2>{{ letter.letter }}</H2></b-button
