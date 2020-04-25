@@ -8,9 +8,11 @@
 
     <h1>Letters</h1>
     <ul>
-      var randomnumber=Math.floor(Math.random()*11) var randomnumber2=Math.floor(Math.random()*11)
+      <h3 class="pb-4">
+        {{ randomnumber }} {{ randomopperator }} {{ randomnumber2 }} = {{ result }}
+      </h3>
 
-      <p></p>
+      <b-button @click.prevent="Calculations()" style="primary">Calculate</b-button>
     </ul>
     <h3>Ecosystem</h3>
     <ul>
@@ -33,22 +35,36 @@
 
 <script>
 export default {
-  name: 'HelloWorld:',
+  name: 'HelloWorld',
   props: {
     msg: String,
   },
+  data() {
+    return {
+      result: 0,
+      randomnumber: 0,
+      randomnumber2: 0,
+      randomopperator: '',
+    };
+  },
   methods: {
-    Math() {
-      const randomnumber = Math.floor(Math.random() * 11);
-      const randomnumber2 = Math.floor(Math.random() * 11);
-      const randomopperator = Math.floor(Math.random() * 2);
+    Calculations() {
+      const randomnumber = Math.floor(Math.abs(Math.random() * 7));
+      const randomnumber2 = Math.floor(Math.abs(Math.random() * 7));
+      const randomopperator = Math.floor(Math.abs(Math.random() * 2));
       var result;
+      // var plus;
+      // var minus;
       if (randomopperator === 0) {
+        this.randomopperator = '+';
         result = randomnumber + randomnumber2;
       } else {
+        this.randomopperator = '-';
         result = randomnumber - randomnumber2;
       }
-      return result;
+      this.result = result;
+      this.randomnumber = randomnumber;
+      this.randomnumber2 = randomnumber2;
     },
   },
 };
