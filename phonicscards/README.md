@@ -1,3 +1,8 @@
+# Technology
+
+We are using VueJS to develop our web application.
+To deploy our project to Google Cloud Platform, we are using Buddy.
+
 # Just Keep Learning, Virtual Woodchucks
 
 Virtual Woodchucks is a website designed for helping my Mom, Irene, teach her students online.
