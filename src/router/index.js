@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
-import PhonicCards from '../components/PhonicCards.vue';
+import AlphabetCards from '@/components/AlphabetCards.vue';
+import Home from '@/components/Home.vue';
 
 Vue.use(VueRouter);
 
@@ -20,9 +20,9 @@ const routes = [
   //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   // },
   {
-    path: '/phonicCards',
-    name: 'PhonicCards',
-    component: PhonicCards,
+    path: '/AlphabetCards',
+    name: 'AlphabetCards',
+    component: AlphabetCards,
   },
 ];
 
