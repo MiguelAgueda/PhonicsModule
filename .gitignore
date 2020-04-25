@@ -1,4 +1,3 @@
-node_modules/
 .DS_Store
 node_modules
 
@@ -19,3 +18,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
