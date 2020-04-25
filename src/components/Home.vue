@@ -1,0 +1,13 @@
+<template>
+  <b-component class="text-center">
+    <h1>Welcome, Virtual Woodchucks!</h1>
+    <h3>Let's get learning</h3>
+    <a href="/AlphabetCards" style="color:#28a745" target="_self"><h4>Alphabet Cards</h4></a>
+  </b-component>
+</template>
+
+<script>
+export default {
+  name: 'Home',
+};
+</script>

@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'PhonicCards',
+  name: 'AlphabetCards',
 
   data() {
     return {
