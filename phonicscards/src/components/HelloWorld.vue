@@ -12,7 +12,9 @@
         {{ randomnumber }} {{ randomopperator }} {{ randomnumber2 }} = {{ result }}
       </h3>
 
-      <b-button @click.prevent="Calculations()" style="primary">Calculate</b-button>
+      <b-container>
+        <b-button color="#FFFFF" @click.prevent="Calculations()">Calculate</b-button>
+      </b-container>
     </ul>
     <h3>Ecosystem</h3>
     <ul>
