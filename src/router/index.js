@@ -32,7 +32,7 @@ const routes = [
     component: NumberLines,
   },
   {
-    path: '/SpeechRecog',
+    path: '/SpellingHelp',
     name: 'SpeechRecog',
     component: SpeechRecog,
   },
