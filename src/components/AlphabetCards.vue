@@ -1,9 +1,11 @@
 <template>
   <b-container>
+    <h1 class="pt-2">Let's make some noise!</h1>
+    <h3 class="pb-4">Press on a button to hear the sound</h3>
     <b-row v-for="row in rows" :key="row[0].letter">
       <b-card-group deck class=" pb-4 mx-auto" v-for="letter in row" :key="letter.letter">
         <!-- <b-card-group> -->
-        <b-card img-top style="max-width: 17rem;" :img-src="letter.image">
+        <b-card img-top style="max-width: 15rem;" :img-src="letter.image">
           <b-card-title>
             <b-button href="#" variant="success" @click.prevent="playSound(letter.sound)"
               ><H2>{{ letter.letter }}</H2></b-button
@@ -35,133 +37,133 @@ export default {
       return [
         {
           letter: 'A',
-          image: 'Apple.png',
-          sound: 'A.m4a',
+          image: 'ABC/Apple.png',
+          sound: 'Sounds/A.mp3',
         },
         {
           letter: 'B',
-          image: 'Balloon.png',
-          sound: 'A.m4a',
+          image: 'ABC/Balloon.png',
+          sound: 'Sounds/B.mp3',
         },
         {
           letter: 'C',
-          image: 'Caterpillar.png',
-          sound: 'A.m4a',
+          image: 'ABC/Caterpillar.png',
+          sound: 'Sounds/C.mp3',
         },
         {
           letter: 'D',
-          image: 'Dog.png',
-          sound: 'A.m4a',
+          image: 'ABC/Dog.png',
+          sound: 'Sounds/D.mp3',
         },
         {
           letter: 'E',
-          image: 'Egg.png',
-          sound: 'A.m4a',
+          image: 'ABC/Egg.png',
+          sound: 'Sounds/E.mp3',
         },
         {
           letter: 'F',
-          image: 'Fish.png',
-          sound: 'A.m4a',
+          image: 'ABC/Fish.png',
+          sound: 'Sounds/F.mp3',
         },
         {
           letter: 'G',
-          image: 'Guitar.png',
-          sound: 'A.m4a',
+          image: 'ABC/Guitar.png',
+          sound: 'Sounds/G.mp3',
         },
         {
           letter: 'H',
-          image: 'Hat.png',
-          sound: 'A.m4a',
+          image: 'ABC/Hat.png',
+          sound: 'Sounds/H.mp3',
         },
         {
           letter: 'I',
-          image: 'Igloo.png',
-          sound: 'A.m4a',
+          image: 'ABC/Igloo.png',
+          sound: 'Sounds/I.mp3',
         },
         {
           letter: 'J',
-          image: 'Jar.png',
-          sound: 'A.m4a',
+          image: 'ABC/Jar.png',
+          sound: 'Sounds/J.mp3',
         },
         {
           letter: 'K',
-          image: 'Key.png',
-          sound: 'A.m4a',
+          image: 'ABC/Key.png',
+          sound: 'Sounds/K.mp3',
         },
         {
           letter: 'L',
-          image: 'Lamp.png',
-          sound: 'A.m4a',
+          image: 'ABC/Lamp.png',
+          sound: 'Sounds/L.mp3',
         },
         {
           letter: 'M',
-          image: 'Monkey.png',
-          sound: 'A.m4a',
+          image: 'ABC/Monkey.png',
+          sound: 'Sounds/M.mp3',
         },
         {
           letter: 'N',
-          image: 'Nest.png',
-          sound: 'A.m4a',
+          image: 'ABC/Nest.png',
+          sound: 'Sounds/N.mp3',
         },
         {
           letter: 'O',
-          image: 'Octopus.png',
-          sound: 'A.m4a',
+          image: 'ABC/Octopus.png',
+          sound: 'Sounds/O.mp3',
         },
         {
           letter: 'P',
-          image: 'Pencil.png',
-          sound: 'A.m4a',
+          image: 'ABC/Pencil.png',
+          sound: 'Sounds/P.mp3',
         },
         {
           letter: 'Q',
-          image: 'Queen.png',
-          sound: 'A.m4a',
+          image: 'ABC/Queen.png',
+          sound: 'Sounds/Q.mp3',
         },
         {
           letter: 'R',
-          image: 'Ring.png',
-          sound: 'A.m4a',
+          image: 'ABC/Ring.png',
+          sound: 'Sounds/R.mp3',
         },
         {
           letter: 'S',
-          image: 'Snake.png',
-          sound: 'A.m4a',
+          image: 'ABC/Snake.png',
+          sound: 'Sounds/S.mp3',
         },
         {
           letter: 'T',
-          image: 'Turtle.png',
-          sound: 'A.m4a',
+          image: 'ABC/Turtle.png',
+          sound: 'Sounds/T.mp3',
         },
         {
           letter: 'U',
-          image: 'Umbrella.png',
-          sound: 'A.m4a',
+          image: 'ABC/Umbrella.png',
+          sound: 'Sounds/U.mp3',
         },
         {
           letter: 'V',
-          image: 'Vacuum.png',
-          sound: 'A.m4a',
+          image: 'ABC/Vacuum.png',
+          sound: 'Sounds/V.mp3',
         },
         {
           letter: 'W',
-          image: 'Wagon.png',
-          sound: 'A.m4a',
+          image: 'ABC/Wagon.png',
+          sound: 'Sounds/W.mp3',
         },
         {
           letter: 'X',
-          image: 'Box.png',
-          sound: 'A.m4a',
+          image: 'ABC/Box.png',
+          sound: 'Sounds/X.mp3',
         },
         {
           letter: 'Y',
-          image: 'Yo-Yo.png',
-          sound: 'A.m4a',
+          image: 'ABC/Yo-Yo.png',
+          sound: 'Sounds/Y.mp3',
         },
         {
           letter: 'Z',
-          image: 'Zipper.png',
-          sound: 'A.m4a',
+          image: 'ABC/Zipper.png',
+          sound: 'Sounds/Z.mp3',
         },
       ];
     },

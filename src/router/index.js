@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import AlphabetCards from '@/components/AlphabetCards.vue';
 import Home from '@/components/Home.vue';
+import NumberLines from '@/components/NumberLines.vue';
+import SpeechRecog from '@/components/SpeechRecog.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +25,16 @@ const routes = [
     path: '/AlphabetCards',
     name: 'AlphabetCards',
     component: AlphabetCards,
+  },
+  {
+    path: '/NumberLines',
+    name: 'NumberLines',
+    component: NumberLines,
+  },
+  {
+    path: '/SpeechRecog',
+    name: 'SpeechRecog',
+    component: SpeechRecog,
   },
 ];
 
