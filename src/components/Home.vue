@@ -12,3 +12,4 @@ export default {
   name: 'Home',
 };
 </script>
+// For push to GitHub.
