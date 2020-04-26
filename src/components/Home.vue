@@ -4,7 +4,7 @@
     <h3>Let's get learning</h3>
     <a href="/AlphabetCards" style="color:#28a745" target="_self"><h4>Alphabet Cards</h4></a>
     <!-- <a href="/NumberLines" style="color:#28a745" target="_self"><h4>Number Lines</h4></a> -->
-    <a href="/SpeechRecog" style="color:#28a745" target="_self"><h4>Help with Spelling</h4></a>
+    <a href="/SpellingHelp" style="color:#28a745" target="_self"><h4>Help with Spelling</h4></a>
   </b-container>
 </template>
 
