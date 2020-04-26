@@ -1,12 +1,18 @@
 <template>
   <b-container class="pl-3 pr-3">
-    <h3>Let's Use Some Number Lines</h3>
+    <h1>Let's Use Number Lines</h1>
     <b-container class="text-left pt-4 pb-4">
-      <label for="nl1"><h4>Choose your favorite number on the number line.</h4></label>
+      <label for="nl1"><h3>Choose your favorite number on the number line.</h3></label>
       <b-input-group class="pb-2" prepend="0" append="10">
         <b-form-input id="nl1" v-model="numberLine1" type="range" min="0" max="10"></b-form-input>
       </b-input-group>
-      <label for="nl1">Your favorite number is {{ numberLine1 }}.</label>
+      <label for="nl1"
+        ><h4 class="pt-2">Is your favorite number {{ numberLine1 }}?</h4></label
+      >
+      <b-button-group class="pl-4">
+        <b-button variant="success">Yes!</b-button>
+        <b-button variant="danger">No!</b-button>
+      </b-button-group>
     </b-container>
 
     <b-container class="text-left pt-4 pb-4">
